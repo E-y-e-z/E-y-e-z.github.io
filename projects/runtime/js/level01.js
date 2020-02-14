@@ -50,10 +50,10 @@ var level01 = function (window) {
         
         game.addGameItem(sawBladeHitZone);  
         
-        var obstacleImage = draw.bitmap('img/sawblade.png');
+        var obstacleImage = draw.bitmap('img/sword.png');
         sawBladeHitZone.addChild(obstacleImage);
-        obstacleImage.x = -25;
-        obstacleImage.y = -25;
+        obstacleImage.x = -10;
+        obstacleImage.y = -10;
         
         }
         
@@ -86,8 +86,8 @@ var level01 = function (window) {
                     
                     var obstacleImage = draw.bitmap('img/spike.png');
                     sawBladeHitZone.addChild(obstacleImage);
-                    obstacleImage.x = -25;
-                    obstacleImage.y = -25;
+                    obstacleImage.x = -35;
+                    obstacleImage.y = -35;
                     obstacleImage.scaleX = .2
                     obstacleImage.scaleY = .2
                 // code for creating myObstacle

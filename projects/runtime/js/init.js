@@ -35,11 +35,11 @@ var init = function (window) {
     var background = opspark.makeBackground(app,ground);
     view.addChild(background);
     
-    var help = draw.textfield('MOVES || up: jump | right: flying jump | down: duck | space: fire | q self destruct!', 
+    var help = draw.textfield('MOVES || up: jump | right: fire | down: duck | space: flying jump | q self destruct!', 
         '20px Arial',
         '#ccc', 'left');
-    help.x = 10;
-    help.y = ground.y + ground.getBounds().height + 10;
+    help.x = 0;
+    help.y = ground.y + ground.getBounds().height + 1;
     view.addChild(help);
     
     window.opspark.makeSpriteSheet(data)
@@ -59,7 +59,7 @@ var init = function (window) {
             app.addUpdateable(playerManager);
             app.addUpdateable({update: update});
         });
-    
+
     view.addChild(fps);
     app.addUpdateable(fps);
     

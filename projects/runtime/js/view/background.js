@@ -39,14 +39,14 @@ var background = function (window) {
             // TODO: 2 - Part 2
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'#404040');
+            var backgroundFill = draw.rect(canvasWidth,groundY,'#0000cc');
             background.addChild(backgroundFill);
             
             // TODO: 3 - Add a moon and starfield
             
             var circle;
                 for(var i=0;i<80;i++) {
-                    circle = draw.circle(1,'white',' #3366ff',2);
+                    circle = draw.circle(1,'white',' lightgrey',2);
                     circle.x = canvasWidth*Math.random();
                     circle.y = groundY*Math.random();
                     background.addChild(circle);
@@ -54,17 +54,17 @@ var background = function (window) {
            
             var moon = draw.bitmap('img/moon.png');
             moon.x = 1000;
-            moon.y = 30;
-            moon.scaleX = .2;
-            moon.scaleY = .2;
+            moon.y = 10;
+            moon.scaleX = .14;
+            moon.scaleY = .14;
             background.addChild(moon);
             
             // TODO: 5 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             
             for (var i = 0; i<5; i++){
-                var buildingHeight = 300
+                var buildingHeight = 250
                 var buildingColors = ["blue", "black", "lightblue", "red", "#6699cc", "black"]
-                var buildingDiffrentHeights = [300, 170, 220, 250, 300]
+                var buildingDiffrentHeights = [270, 170, 220, 250, 190]
             }
             
             
@@ -87,7 +87,7 @@ var background = function (window) {
             tree.y = groundY -490;
             background.addChild(tree);
             
-          
+           
             
             
             
@@ -109,6 +109,8 @@ var background = function (window) {
                 tree.x = canvasWidth;
             }
             
+          
+          
               
           
             

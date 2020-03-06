@@ -14,7 +14,7 @@ var level01 = function (window) {
         var levelData = {
             "name": "Robot Romp",
             "number": 1, 
-            "speed": -3,
+            "speed": -1,
             "gameItems": [
                 
                 
@@ -24,14 +24,14 @@ var level01 = function (window) {
                 { "type": "enemy", "x": 1000, "y": groundY -100 },
                 { "type": "sawblade", "x": 1600, "y": groundY -20 },
                 { "type": "spike", "x": 800, "y": groundY -20},
-                { "type": "spike", "x": 1200, "y": groundY -20 },
+                { "type": "spike", "x": 1500, "y": groundY -20 },
                 { "type": "spike", "x": 1800, "y": groundY -20 },
-                  { "type": "enemy", "x": 4000, "y": groundY -100 },
-                 { "type": "spike", "x":2500, "y": groundY -20},
+                { "type": "enemy", "x": 4000, "y": groundY -100 },
+                { "type": "spike", "x":2500, "y": groundY -20},
                 { "type": "spike", "x": 4000, "y": groundY -20 },
                 { "type": "spike", "x": 3000, "y": groundY -20 },
-            
-            
+                { "type": "sawblade", "x": 3000, "y": groundY -20 },
+                { "type": "sawblade", "x": 3500, "y": groundY -20 },
             ]
         };
         window.levelData = levelData;
@@ -42,8 +42,8 @@ var level01 = function (window) {
 
         function createSawblade (x,y){
             
-        var hitZoneSize = 25;
-        var damageFromObstacle = 10;
+        var hitZoneSize = 12;
+        var damageFromObstacle = 5;
         var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
         sawBladeHitZone.x = x;
         sawBladeHitZone.y = y;
@@ -76,8 +76,8 @@ var level01 = function (window) {
                 
                 
                 function createSpikes(x,y) { 
-                    var hitZoneSize = 25;
-                    var damageFromObstacle = 10;
+                    var hitZoneSize = 45;
+                    var damageFromObstacle = 3;
                     var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
                     sawBladeHitZone.x = x;
                     sawBladeHitZone.y = y;
@@ -86,10 +86,10 @@ var level01 = function (window) {
                     
                     var obstacleImage = draw.bitmap('img/spike.png');
                     sawBladeHitZone.addChild(obstacleImage);
-                    obstacleImage.x = -35;
+                    obstacleImage.x = -25;
                     obstacleImage.y = -35;
-                    obstacleImage.scaleX = .2
-                    obstacleImage.scaleY = .2
+                    obstacleImage.scaleX = .12
+                    obstacleImage.scaleY = .12
                 // code for creating myObstacle
                  };
                  
@@ -109,9 +109,9 @@ var level01 = function (window) {
 
                 function createEnemy(x,y){
                 var enemy =  game.createGameItem('enemy',25);
-                var redSquare = draw.rect(50,50,'darkblue');
-                redSquare.x = -25;
-                redSquare.y = -25;
+                var redSquare = draw.rect(50,50,'black');
+                redSquare.x = -20;
+                redSquare.y = -20;
                 enemy.addChild(redSquare);
                 
                 enemy.x = 400;
@@ -119,7 +119,7 @@ var level01 = function (window) {
                 
                 game.addGameItem(enemy);
 
-                enemy.velocityX = -1;
+                enemy.velocityX = -2;
 
                 enemy.onPlayerCollision = function() {
                     console.log('The enemy has hit Halle');
@@ -128,7 +128,7 @@ var level01 = function (window) {
                 };
 
                 enemy.onProjectileCollision = function(){
-                    game.increaseScore(50);
+                    game.increaseScore(100);
                      enemy.fadeout();
                 };
 

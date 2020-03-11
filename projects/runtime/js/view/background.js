@@ -30,7 +30,7 @@ var background = function (window) {
         
         var tree;
     
-        
+        var spaceship;
         // called at the start of game and whenever the page is resized
         // add objects for display in background. draws each image added to the background once
         function render() {
@@ -82,12 +82,19 @@ var background = function (window) {
             
             // TODO 4: Part 1 - Add a tree
             
+            
+            spaceship = draw.bitmap('img/spaceship.png');
+            spaceship.x = 500
+            spaceship.y = -100;
+            background.addChild(spaceship);
+            
+            
             tree = draw.bitmap('img/tree.png');
             tree.x = 800;
             tree.y = groundY -490;
             background.addChild(tree);
             
-           
+          
             
             
             
@@ -110,7 +117,10 @@ var background = function (window) {
             }
             
           
-          
+          spaceship.x = spaceship.y - 1
+          if (spaceship.x < -200){
+              spaceship.x = canvasWidth;
+          }
               
           
             

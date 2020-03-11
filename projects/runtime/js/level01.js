@@ -11,6 +11,10 @@ var level01 = function (window) {
 
         // this data will allow us to define all of the
         // behavior of our game
+        
+        //"Level 1"
+        
+        
         var levelData = {
             "name": "Robot Romp",
             "number": 1, 
@@ -32,8 +36,39 @@ var level01 = function (window) {
                 { "type": "spike", "x": 3000, "y": groundY -20 },
                 { "type": "sawblade", "x": 3000, "y": groundY -20 },
                 { "type": "sawblade", "x": 3500, "y": groundY -20 },
+            
+       
+        
+        //"Level 2"
+        
+                { "type": "sawblade", "x": 6000, "y": groundY -100 },
+                { "type": "sawblade", "x": 6500, "y": groundY -100 },
+                { "type": "sawblade", "x": 8090, "y": groundY -100 },
+                { "type": "enemy", "x": 8900, "y": groundY -100 },
+                { "type": "sawblade", "x": 6000, "y": groundY -20 },
+                { "type": "spike", "x": 8000, "y": groundY -20},
+                { "type": "spike", "x": 4500, "y": groundY -20 },
+                { "type": "spike", "x": 7500, "y": groundY -20 },
+                { "type": "enemy", "x": 10000, "y": groundY -100 },
+                { "type": "spike", "x":7900, "y": groundY -20},
+                { "type": "spike", "x": 8000, "y": groundY -20 },
+                { "type": "spike", "x": 5000, "y": groundY -20 },
+                { "type": "sawblade", "x": 5500, "y": groundY -20 },
+                { "type": "sawblade", "x": 7000, "y": groundY -20 },
             ]
         };
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         window.levelData = levelData;
         // set this to true or false depending on if you want to see hitzones
         game.setDebugMode(true);

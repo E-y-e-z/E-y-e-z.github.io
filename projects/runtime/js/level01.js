@@ -39,7 +39,7 @@ var level01 = function (window) {
             
        
         
-        //"Level 2"
+       
         
                 { "type": "sawblade", "x": 6000, "y": groundY -100 },
                 { "type": "sawblade", "x": 6500, "y": groundY -100 },
@@ -55,6 +55,39 @@ var level01 = function (window) {
                 { "type": "spike", "x": 5000, "y": groundY -20 },
                 { "type": "sawblade", "x": 5500, "y": groundY -20 },
                 { "type": "sawblade", "x": 7000, "y": groundY -20 },
+            
+            
+            
+                { "type": "sawblade", "x": 11500, "y": groundY -100 },
+                { "type": "sawblade", "x": 10000, "y": groundY -100 },
+                { "type": "sawblade", "x": 11000, "y": groundY -100 },
+                { "type": "enemy", "x": 10500, "y": groundY -100 },
+                { "type": "sawblade", "x": 10500, "y": groundY -20 },
+                { "type": "spike", "x": 11500, "y": groundY -20},
+                { "type": "spike", "x": 11000, "y": groundY -20 },
+                { "type": "spike", "x": 12500, "y": groundY -20 },
+                { "type": "enemy", "x": 10000, "y": groundY -100 },
+                { "type": "spike", "x":8900, "y": groundY -20},
+                { "type": "spike", "x": 9200, "y": groundY -20 },
+                { "type": "spike", "x": 9000, "y": groundY -20 },
+                { "type": "sawblade", "x": 9000, "y": groundY -20 },
+                { "type": "sawblade", "x": 10000, "y": groundY -20 },
+                { "type": "spike", "x": 12000, "y": groundY -20},
+                { "type": "spike", "x": 12500, "y": groundY -20 },
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             ]
         };
         
